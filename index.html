@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title> Sky Park </title>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="css/app.min.css" rel="stylesheet" />
+  <link href="css/font.awesome.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  <!-- ================================ Side Nav ============== -->
+  <aside id="sidenav-main"
+    class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white"> </aside>
+  <!-- ================================ end Side Nav ================== -->
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- ================================ NavBar ================== -->
+    <nav id="navbarBlur"
+      class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 p-2 px-3 mx-4 shadow-none border-radius-xl z-index-sticky"
+      data-scroll="true">    </nav>
+    <!-- ================================ end NavBar ================== -->
+    <content class="container-fluid py-4">
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <div class="row">
+        <div class="col-lg-7 position-relative z-index-2">
+          <div class="card card-plain mb-4">
+            <div class="card-body p-1">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="d-flex flex-column h-100">
+                    <h2 class="font-weight-bolder mb-0">General Statistics</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-sm-6 p-2">
+              <div class="card">
+                <div class="card-body p-2">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="numbers">
+                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                        <h5 class="font-weight-bolder mb-0">
+                          53,000
+                          <span class="text-success text-sm font-weight-bolder">EGP</span>
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="col-4 text-end">
+                      <div class="icon icon-shape bg-gradient-primary shadow ms-auto text-center border-radius-md">
+                        <i class="fas fa-sack-dollar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-sm-6 p-2">
+              <div class="card">
+                <div class="card-body p-2">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="numbers">
+                        <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                        <h5 class="font-weight-bolder mb-0">
+                          +3,462
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="col-4 text-end">
+                      <div class="icon icon-shape bg-gradient-primary shadow ms-auto text-center border-radius-md">
+                        <i class="fas fa-sparkles"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-sm-6 p-2">
+              <div class="card">
+                <div class="card-body p-2">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="numbers">
+                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Clients</p>
+                        <h5 class="font-weight-bolder mb-0">
+                          20,300
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="col-4 text-end">
+                      <div class="icon icon-shape bg-gradient-primary shadow ms-auto text-center border-radius-md">
+                        <i class="fas fa-globe-europe"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-7">
+          <div class="card z-index-2">
+            <div class="card-header pb-0">
+              <h6>Clients overview</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success"></i>
+                <span class="font-weight-bold">4% more</span> in 2021
+              </p>
+            </div>
+            <div class="card-body p-2">
+              <div class="chart">
+                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div id="globe" class="position-absolute end-0 top-10 mt-sm-3 mt-7 me-lg-7">
+            <canvas width="700" height="600" class="w-lg-100 h-lg-100 w-75 h-75 me-lg-0 me-n10 mt-lg-5"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+      <!-- ================================ Footer ================== -->
+      <footer id="loadFooter" class="footer pt-3"></footer>
+      <!-- ================================ end Footer ================== -->
+    </content>
+  </main>
+  <!-- ================================================== -->
+  <!-- ================================================== -->
+  <!-- ================================================== -->
+  <!-- ================== JS Files ====================== -->
+  <!-- ================================================== -->
+  <!-- ================================================== -->
+  <!-- ================================================== -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- plugins -->
+  <script src="js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="js/plugins/chartjs.min.js"></script>
+  <script src="js/plugins/threejs.js"></script>
+  <script src="js/plugins/orbit-controls.js"></script>
+  <!-- dashboard Js -->
+  <script src="js/app.min.js"></script>
+  <!-- custom Js -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

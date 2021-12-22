@@ -1,0 +1,161 @@
+$mainColor:#a6c64c;
+$secondColor:#0080a4;
+$thirdColor:#073b44;
+$gold: #FFD700;
+$white-color: #ffffff;
+$black-color: #292929;
+$transition: all .3s ease-in-out;
+$shadow: 0px 2px 6px #00000030;
+$BigShadow: 0px 10px 30px #00000030;
+
+@font-face {
+    font-family: Almarai;
+    src: url(../webfonts/Almarai-Regular.ttf);
+}
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+    font-family: 'Almarai';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #F8F8F8;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $secondColor;
+    outline: 1px solid $secondColor;
+    border-radius: 20px !important;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $mainColor;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.row {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .container , .container-fluid {
+        padding: 0px 5px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+content {
+    min-height: 70vh;
+    display: block;
+    position: relative;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+    overflow: hidden;
+}
+
+.sidenav-header {
+    height: unset;
+}
+
+.navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
+    background-image: linear-gradient(270deg, #a6c64c, #709900);
+}
+.icon-shape i{
+    opacity: 1;
+}
+.bg-gradient-primary {
+    background-image: linear-gradient(310deg, #a6c64c, #709900);
+}
+
+.navbar-vertical .navbar-nav>.nav-item .nav-link.active {
+    color: $thirdColor;
+}
+
+.navbar-vertical .navbar-nav .nav-item .collapse .nav .nav-item.active .nav-link {
+    color: $mainColor;
+
+    &:before {
+        background-color: $mainColor;
+    }
+}
+
+.sidenav {
+    .navbar-brand {
+        text-align: center;
+        padding: 20px 5px 10px 5px;
+
+        img {
+            height: 60px !important;
+            max-height: unset !important;
+            object-fit: contain;
+        }
+    }
+}
+
+.navbar-vertical .navbar-nav .nav-link .icon {
+    padding: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        color: $black-color;
+        font-size: 16px;
+    }
+}
+
+.navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
+    i {
+        color: $white-color;
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    text-transform: capitalize;
+}
