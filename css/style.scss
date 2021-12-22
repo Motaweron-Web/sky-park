@@ -21,22 +21,27 @@ $BigShadow: 0px 10px 30px #00000030;
     margin: 0;
     padding: 0;
     outline: none;
+    letter-spacing: .5px;
 }
 
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-    background-color: #F8F8F8;
+    background-color: #F8F9FA;
+    border-radius: 20px !important;
+
 }
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $secondColor;
-    outline: 1px solid $secondColor;
+    background-color: #999;
+    outline: none;
     border-radius: 20px !important;
+
 }
 
 a {
@@ -53,10 +58,16 @@ button:focus {
     outline: 0;
 }
 
+.form-control:focus {
+    box-shadow: none;
+    border-color: $mainColor;
+}
+
 .row {
     margin: 0px;
 }
 
+a,
 h1,
 h2,
 h3,
@@ -65,11 +76,14 @@ h5,
 h6,
 p {
     margin: 0;
+    letter-spacing: .5px;
 }
 
 @media (max-width: 767px) {
-    .container , .container-fluid {
-        padding: 0px 5px;
+
+    .container,
+    .container-fluid {
+        padding: 0px 8px;
     }
 }
 
@@ -104,13 +118,19 @@ content {
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
-    background-image: linear-gradient(270deg, #a6c64c, #709900);
+    background-image: linear-gradient(45deg, $secondColor, $mainColor);
 }
-.icon-shape i{
+
+.icon-shape i {
     opacity: 1;
 }
+
 .bg-gradient-primary {
-    background-image: linear-gradient(310deg, #a6c64c, #709900);
+    background-image: linear-gradient(45deg, $secondColor, $mainColor);
+}
+
+.bg-gradient-primary-light {
+    background-image: linear-gradient(45deg, #0080a420, #a6c64c20);
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active {
@@ -138,6 +158,10 @@ content {
     }
 }
 
+.form-label {
+    text-transform: capitalize;
+}
+
 .navbar-vertical .navbar-nav .nav-link .icon {
     padding: unset;
     display: flex;
@@ -158,4 +182,143 @@ content {
 
 .breadcrumb-item+.breadcrumb-item {
     text-transform: capitalize;
+}
+
+.MainTitle {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.input-group .form-control:focus {
+    border-right-color: $mainColor !important;
+    border-left-color: $mainColor !important;
+}
+
+.is-focused .choices__inner,
+.is-open .choices__inner {
+    box-shadow: none;
+    border-color: $mainColor;
+}
+
+.choices[data-type*=select-one] .choices__input {
+    border: 1px solid #d2d6da;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.form-control,
+.choices__inner {
+    min-height: 54px;
+}
+
+.choices[data-type*=select-one]:after {
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.choices[data-type*=select-one].is-open:after {
+    transform: translateY(-50%) rotate(180deg);
+
+}
+
+.choices__list--dropdown .choices__item {
+    padding: 4px 10px !important;
+}
+
+
+
+
+.choose {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+
+    .genderOption {
+        width: 46%;
+    }
+
+    .btn {
+        padding: 15px 20px;
+        border: 1px solid #d2d6da;
+        box-shadow: none;
+        width: 100%;
+        background-color: $white-color;
+
+        span {
+            text-transform: capitalize;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+    }
+
+    .btn-check:active+.btn-outline,
+    .btn-check:checked+.btn-outline,
+    .btn-outline.active,
+    .btn-outline.dropdown-toggle.show,
+    .btn-outline:active {
+        background-color: $mainColor;
+        color: $white-color;
+
+    }
+}
+
+footer {
+    //   background-image: url(../img/grass.png);
+    //   background-size: contain;
+    //   background-position: center left;
+    //   margin-top: 50px;
+    //   position: relative;
+    //   padding-top: 50px;
+    //   z-index: 9999;
+    padding: 40px 20px;
+}
+
+
+.visitorType {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 0px 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: $transition;
+    border: 1px solid #eee;
+    position: relative;
+
+    svg {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .visitor {
+        margin-top: 10px;
+        display: block;
+    }
+
+    &:hover {
+        box-shadow: $BigShadow;
+        transform: translateY(-5px);
+    }
+
+    .count {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        min-width: 30px;
+        height: 30px;
+        border-radius: 1000px;
+        border: 1px solid $mainColor;
+        background-color: $white-color;
+        color: $mainColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: 12px;
+    }
 }
