@@ -40,6 +40,7 @@
               <button class="multisteps-form__progress-btn js-active" title="ticket"> <span>ticket</span> </button>
               <button class="multisteps-form__progress-btn" title="visitors"> visitors</button>
               <button class="multisteps-form__progress-btn" title="products"> products</button>
+              <button class="multisteps-form__progress-btn" title="payment"> payment</button>
             </div>
             <form class="multisteps-form__form mb-2" action="">
               <!-- step 1 -->
@@ -401,7 +402,7 @@
                     </div>
                   </div>
                   <div class="button-row d-flex mt-4">
-                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" >Prev</button>
+                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button">Prev</button>
                     <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button">Next</button>
                   </div>
                 </div>
@@ -426,7 +427,7 @@
                       </select>
                     </div>
                     <div class="col-md-2 p-2">
-                      <button class="btn btn-success w-100 "> ADD </button>
+                      <button type="button" class="btn btn-success w-100 "> ADD </button>
                     </div>
                     <div class="col-md-12 p-2  pt-5">
                       <table class=" customDataTable table table-bordered nowrap">
@@ -463,74 +464,104 @@
                   </div>
                 </div>
                 <div class="row">
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button">Prev</button>
+                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!-- step 4 -->
+              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white " data-animation="FadeIn">
+                <h5 class="font-weight-bolder">payment</h5>
+                <div class="multisteps-form__content">
+                  <div class="row mt-3">
+
+                  </div>
+                </div>
+                <div class="row">
                   <div class="button-row d-flex mt-4 col-12">
-                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" >Prev</button>
+                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button">Prev</button>
                     <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" "> Confirm </button>
                   </div>
                 </div>
               </div>
             </form>
           </div>
-          <div class="col-lg-3 p-1 ">
-            <div class="bill">
-              <h4 class="font-weight-bolder ps-2">Bill</h4>
-              <div class="info">
-                <h6 class="billTitle"> ticket </h6>
-                <ul>
-                  <li> <label> Visit Date : </label> <strong> 18 / 10 / 2021 </strong> </li>
-                  <li> <label> Reservation Duration : </label> <strong> 2 h </strong> </li>
-                  <li> <label> Shift : </label> <strong> 10am : 12pm </strong> </li>
-                </ul>
-              </div>
-              <div class="info">
-                <h6 class="billTitle"> visitors</h6>
-                <div class="items">
-                  <div class="itemsHead row">
-                    <span class="col" >type</span>
-                    <span class="col" > Quantity </span>
-                    <span class="col" > price </span>
-                  </div>
-                  <div class="item row">
-                    <span class="col" >Adult</span>
-                    <span class="col" > x5 </span>
-                    <span class="col" > 500 EGP </span>
-                  </div>
-                  <div class="item row">
-                    <span class="col" >kid</span>
-                    <span class="col" > x10 </span>
-                    <span class="col" > 1000 EGP </span>
+          <div class=" col-lg-3 p-1 ">
+            <div class=" bill">
+                      <h4 class="font-weight-bolder ps-2">Bill</h4>
+                      <div class="info">
+                        <h6 class="billTitle"> ticket </h6>
+                        <ul>
+                          <li> <label> Visit Date : </label> <strong> 18 / 10 / 2021 </strong> </li>
+                          <li> <label> Reservation Duration : </label> <strong> 2 h </strong> </li>
+                          <li> <label> Shift : </label> <strong> 10am : 12pm </strong> </li>
+                        </ul>
+                      </div>
+                      <div class="info">
+                        <h6 class="billTitle"> visitors</h6>
+                        <div class="items">
+                          <div class="itemsHead row">
+                            <span class="col">type</span>
+                            <span class="col"> Quantity </span>
+                            <span class="col"> price </span>
+                          </div>
+                          <div class="item row">
+                            <span class="col">Adult</span>
+                            <span class="col"> x5 </span>
+                            <span class="col"> 500 EGP </span>
+                          </div>
+                          <div class="item row">
+                            <span class="col">kid</span>
+                            <span class="col"> x10 </span>
+                            <span class="col"> 1000 EGP </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="info">
+                        <h6 class="billTitle"> products</h6>
+
+                        <div class="items">
+                          <div class="itemsHead row">
+                            <span class="col">type</span>
+                            <span class="col"> Quantity </span>
+                            <span class="col"> price </span>
+                          </div>
+                          <div class="item row">
+                            <span class="col">toy </span>
+                            <span class="col"> x5 </span>
+                            <span class="col"> 500 EGP </span>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="info">
+                        <h6 class="billTitle"> Totals </h6>
+                        <ul>
+                          <li> <label> total price : </label> <strong> 1500 EGP </strong> </li>
+                          <li> <label> Discount : </label> <strong> 50 EGP </strong> </li>
+                          <li> <label> Revenue : </label> <strong> 1450 EGP </strong> </li>
+                          <li> <label> paid : </label> <strong> 1600 EGP </strong> </li>
+                          <li> <label> Change : </label> <strong> 150 EGP </strong> </li>
+                        </ul>
+                      </div>
+
+                      <div class="printBtn">
+                        <button class="btn btn-outline-info fw-normal"> <i class="fal fa-print me-2"></i> Print </button>
+                        <button class="btn btn-info"> <i class="fas fa-sign-out me-2"></i> Print & Exit </button>
+                      </div>
                   </div>
                 </div>
               </div>
-              <div class="info">
-                <h6 class="billTitle"> products</h6>
-
-                <div class="items">
-                  <div class="itemsHead row">
-                    <span class="col" >type</span>
-                    <span class="col" > Quantity </span>
-                    <span class="col" > price </span>
-                  </div>
-                  <div class="item row">
-                    <span class="col" >toy </span>
-                    <span class="col" > x5 </span>
-                    <span class="col" > 500 EGP </span>
-                  </div>
-                </div>
-
-      
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
-      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
-      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
-      <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
-      <!-- ================================ Footer ================== -->
-      <footer id="loadFooter" class="footer pt-3"></footer>
-      <!-- ================================ end Footer ================== -->
+          <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+          <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+          <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+          <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
+          <!-- ================================ Footer ================== -->
+          <footer id="loadFooter" class="footer pt-3"></footer>
+          <!-- ================================ end Footer ================== -->
     </content>
   </main>
   <!-- ================================================== -->

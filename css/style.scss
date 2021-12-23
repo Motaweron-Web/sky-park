@@ -505,6 +505,7 @@ footer {
                 label {
                     margin: 0;
                     font-weight: normal;
+                    text-transform: capitalize;
                 }
 
                 strong {
@@ -571,5 +572,16 @@ footer {
 
             }
         }
+    }
+}
+
+.printBtn {
+    padding-top: 30px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .btn {
+        display: block;
     }
 }

@@ -505,6 +505,7 @@ footer {
 .bill .info ul li label {
   margin: 0;
   font-weight: normal;
+  text-transform: capitalize;
 }
 
 .bill .info ul li strong {
@@ -571,5 +572,21 @@ footer {
 .bill .info .items .item .col {
   font-size: 12px;
   padding: 10px;
+}
+
+.printBtn {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.printBtn .btn {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
