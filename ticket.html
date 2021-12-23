@@ -9,6 +9,9 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="css/app.min.css" rel="stylesheet" />
   <link href="css/font.awesome.css" rel="stylesheet" />
+  <!-- data table -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/bs5/dt-1.11.3/af-2.3.7/b-2.1.1/r-2.2.9/datatables.min.css" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
@@ -30,19 +33,17 @@
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
       <h2 class="MainTitle mb-5 ms-4">ticket</h2>
-
       <div class="multisteps-form">
         <div class="row">
-          <div class="col-lg-8 p-2 ">
+          <div class="col-lg-9 p-1 ">
             <div class="multisteps-form__progress mb-5">
               <button class="multisteps-form__progress-btn js-active" title="ticket"> <span>ticket</span> </button>
               <button class="multisteps-form__progress-btn" title="visitors"> visitors</button>
-              <button class="multisteps-form__progress-btn" title="Socials"> Socials</button>
-              <button class="multisteps-form__progress-btn" title="Pricing"> Pricing</button>
+              <button class="multisteps-form__progress-btn" title="products"> products</button>
             </div>
             <form class="multisteps-form__form mb-2" action="">
               <!-- step 1 -->
-              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white " data-animation="FadeIn">
+              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
                 <h5 class="font-weight-bolder">ticket</h5>
                 <div class="multisteps-form__content">
                   <div class="row mt-3">
@@ -54,32 +55,28 @@
                       <label>Reservation Duration (h) </label>
                       <input class="form-control" type="number" />
                     </div>
-
                     <div class="col-12 p-2">
                       <label class="form-label"> shift </label>
                       <select class="form-control" id="choices-shift">
-                        <option>10 am : 12 pm</option>
-                        <option>11 am : 01 pm</option>
-                        <option>12 pm : 02 pm</option>
-                        <option>01 pm : 03 pm</option>
+                        <option value="">10 am : 12 pm</option>
+                        <option value="">11 am : 01 pm</option>
+                        <option value="">12 pm : 02 pm</option>
+                        <option value="">01 pm : 03 pm</option>
                       </select>
                     </div>
-
                   </div>
                   <div class="button-row d-flex mt-4">
-                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
-                      title="Next">Next</button>
+                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button">Next</button>
                   </div>
                 </div>
               </div>
               <!-- step 2 -->
-              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
+              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white " data-animation="FadeIn">
                 <h5 class="font-weight-bolder">visitors</h5>
                 <div class="multisteps-form__content">
                   <div class="row mt-3">
-
+                    <!-- visitor Type  -->
                     <div class="col-12 p-2">
-
                       <div class="visitorType">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                           xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
@@ -169,10 +166,7 @@
                         </svg>
                         <span class="visitor"> toddler </span>
                         <span class="count">12</span>
-
                       </div>
-
-
                       <div class="visitorType">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                           xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
@@ -270,11 +264,8 @@
                         </svg>
                         <span class="visitor"> Kid </span>
                         <span class="count">1</span>
-
                       </div>
-
                       <div class="visitorType">
-
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                           xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 44 58"
                           style="enable-background:new 0 0 512 512" xml:space="preserve">
@@ -334,90 +325,203 @@
                         </svg>
                         <span class="visitor"> adult </span>
                       </div>
-
                     </div>
-
+                    <!-- table -->
+                    <div class="col-12 p-2 position-relative">
+                      <table class=" customDataTable table table-bordered nowrap">
+                        <thead>
+                          <tr>
+                            <th>Type</th>
+                            <th>price </th>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                            <th>Gender</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Kid</td>
+                            <td>80 EGP</td>
+                            <td><input type="text" class="form-control" placeholder="Name"></td>
+                            <td><input type="date" class="form-control" placeholder="Name"></td>
+                            <td>
+                              <div class="choose">
+                                <div class="genderOption">
+                                  <input type="radio" class="btn-check" name="gender" id="option1">
+                                  <label class=" mb-0 btn btn-outline" for="option1">
+                                    <span> <i class="fas fa-male"></i> </span>
+                                  </label>
+                                </div>
+                                <div class="genderOption">
+                                  <input type="radio" class="btn-check" name="gender" id="option2">
+                                  <label class=" mb-0 btn btn-outline" for="option2">
+                                    <span> <i class="fas fa-female"></i> </span>
+                                    <!-- <span> female </span> -->
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="controlIcons">
+                                <span class="icon"> <i class="far fa-trash-alt"></i> </span>
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Kid</td>
+                            <td>80 EGP</td>
+                            <td><input type="text" class="form-control" placeholder="Name"></td>
+                            <td><input type="date" class="form-control" placeholder="Name"></td>
+                            <td>
+                              <div class="choose">
+                                <div class="genderOption">
+                                  <input type="radio" class="btn-check" name="gender2" id="option11">
+                                  <label class=" mb-0 btn btn-outline" for="option11">
+                                    <span> <i class="fas fa-male"></i> </span>
+                                  </label>
+                                </div>
+                                <div class="genderOption">
+                                  <input type="radio" class="btn-check" name="gender2" id="option21">
+                                  <label class=" mb-0 btn btn-outline" for="option21">
+                                    <span> <i class="fas fa-female"></i> </span>
+                                    <!-- <span> female </span> -->
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="controlIcons">
+                                <span class="icon"> <i class="far fa-trash-alt"></i> </span>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                   <div class="button-row d-flex mt-4">
-                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
-                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
-                      title="Next">Next</button>
+                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" >Prev</button>
+                    <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button">Next</button>
                   </div>
                 </div>
               </div>
               <!-- step 3 -->
-              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
-                <h5 class="font-weight-bolder">Socials</h5>
+              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white " data-animation="FadeIn">
+                <h5 class="font-weight-bolder">products</h5>
                 <div class="multisteps-form__content">
-                  <div class="row mt-3">
-                    <div class="col-12">
-                      <label>Shoppify Handle</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="@soft" />
+                  <div class="row mt-3 align-items-end">
+                    <div class="col-md-5 p-2">
+                      <label class="form-label"> category </label>
+                      <select class="form-control" id="choices-category">
+                        <option value="">Toys</option>
+                        <option value="">Meals</option>
+                      </select>
                     </div>
-                    <div class="col-12 mt-3">
-                      <label>Facebook Account</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="https://..." />
+                    <div class="col-md-5 p-2">
+                      <label class="form-label"> product </label>
+                      <select class="form-control" id="choices-product">
+                        <option value="">Toys</option>
+                        <option value="">Meals</option>
+                      </select>
                     </div>
-                    <div class="col-12 mt-3">
-                      <label>Instagram Account</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="https://..." />
+                    <div class="col-md-2 p-2">
+                      <button class="btn btn-success w-100 "> ADD </button>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="button-row d-flex mt-4 col-12">
-                      <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button"
-                        title="Prev">Prev</button>
-                      <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
-                        title="Next">Next</button>
+                    <div class="col-md-12 p-2  pt-5">
+                      <table class=" customDataTable table table-bordered nowrap">
+                        <thead>
+                          <tr>
+                            <th>Type</th>
+                            <th>price </th>
+                            <th>Quantity </th>
+                            <th>Total Price</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Toy</td>
+                            <td>80 EGP</td>
+                            <td>
+                              <div class="countInput">
+                                <button type="button" class=" sub">-</button>
+                                <input type="text" value="0" />
+                                <button type="button" class=" add">+</button>
+                              </div>
+                            </td>
+                            <td> 160 EGP </td>
+                            <td>
+                              <span class="controlIcons">
+                                <span class="icon"> <i class="far fa-trash-alt"></i> </span>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- step 4 -->
-              <div class="card multisteps-form__panel p-3 border-radius-xl bg-white h-100" data-animation="FadeIn">
-                <h5 class="font-weight-bolder">Pricing</h5>
-                <div class="multisteps-form__content mt-3">
-                  <div class="row">
-                    <div class="col-3">
-                      <label>Price</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="99.00" />
-                    </div>
-                    <div class="col-4">
-                      <label>Currency</label>
-                      <select class="form-control" name="choices-sizes" id="choices-currency">
-                        <option value="Choice 1" selected="">USD</option>
-                        <option value="Choice 2">EUR</option>
-                        <option value="Choice 3">GBP</option>
-                        <option value="Choice 4">CNY</option>
-                        <option value="Choice 5">INR</option>
-                        <option value="Choice 6">BTC</option>
-                      </select>
-                    </div>
-                    <div class="col-5">
-                      <label>SKU</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="71283476591" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <label class="mt-4 form-label">Tags</label>
-                      <select class="form-control" name="choices-tags" id="choices-tags" multiple>
-                        <option value="Choice 1" selected>In Stock</option>
-                        <option value="Choice 2">Out of Stock</option>
-                        <option value="Choice 3">Sale</option>
-                        <option value="Choice 4">Black Friday</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="button-row d-flex mt-4">
-                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
-                    <button class="btn bg-gradient-dark ms-auto mb-0" type="button" title="Send">Send</button>
+                <div class="row">
+                  <div class="button-row d-flex mt-4 col-12">
+                    <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button" >Prev</button>
+                    <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" "> Confirm </button>
                   </div>
                 </div>
               </div>
             </form>
           </div>
-          <div class="col-lg-4 p-2"></div>
+          <div class="col-lg-3 p-1 ">
+            <div class="bill">
+              <h4 class="font-weight-bolder ps-2">Bill</h4>
+              <div class="info">
+                <h6 class="billTitle"> ticket </h6>
+                <ul>
+                  <li> <label> Visit Date : </label> <strong> 18 / 10 / 2021 </strong> </li>
+                  <li> <label> Reservation Duration : </label> <strong> 2 h </strong> </li>
+                  <li> <label> Shift : </label> <strong> 10am : 12pm </strong> </li>
+                </ul>
+              </div>
+              <div class="info">
+                <h6 class="billTitle"> visitors</h6>
+                <div class="items">
+                  <div class="itemsHead row">
+                    <span class="col" >type</span>
+                    <span class="col" > Quantity </span>
+                    <span class="col" > price </span>
+                  </div>
+                  <div class="item row">
+                    <span class="col" >Adult</span>
+                    <span class="col" > x5 </span>
+                    <span class="col" > 500 EGP </span>
+                  </div>
+                  <div class="item row">
+                    <span class="col" >kid</span>
+                    <span class="col" > x10 </span>
+                    <span class="col" > 1000 EGP </span>
+                  </div>
+                </div>
+              </div>
+              <div class="info">
+                <h6 class="billTitle"> products</h6>
+
+                <div class="items">
+                  <div class="itemsHead row">
+                    <span class="col" >type</span>
+                    <span class="col" > Quantity </span>
+                    <span class="col" > price </span>
+                  </div>
+                  <div class="item row">
+                    <span class="col" >toy </span>
+                    <span class="col" > x5 </span>
+                    <span class="col" > 500 EGP </span>
+                  </div>
+                </div>
+
+      
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
@@ -436,6 +540,7 @@
   <!-- ================================================== -->
   <!-- ================================================== -->
   <!-- ================================================== -->
+  <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <!-- plugins -->
@@ -446,12 +551,13 @@
   <script src="js/plugins/orbit-controls.js"></script>
   <script src="js/plugins/choices.min.js"></script>
   <script src="plugins/multistep-form.js"></script>
-
+  <!-- data table -->
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/v/bs5/dt-1.11.3/af-2.3.7/b-2.1.1/r-2.2.9/datatables.min.js"></script>
   <!-- dashboard Js -->
   <script src="js/app.min.js"></script>
   <!-- custom Js -->
   <script src="js/custom.js"></script>
-
   <script>
     ////////////////////////////////////////////
     // choice Js
@@ -462,10 +568,29 @@
         searchEnabled: false
       });
     }
-    if (document.getElementById('choices-city')) {
-      var element = document.getElementById('choices-city');
+    if (document.getElementsByClassName('choices-category')) {
+      var element = document.getElementById('choices-category');
+      const options = new Choices(element, {
+        searchEnabled: false
+      });
+    }
+    if (document.getElementById('choices-product')) {
+      var element = document.getElementById('choices-product');
       const options = new Choices(element);
     }
+  </script>
+  <script>
+    $(document).ready(function () {
+      var table = $('.customDataTable').DataTable({
+        responsive: true,
+        // "ordering": true,
+        // columnDefs: [{
+        //   'targets': [4, 5],
+        //   'orderable': false
+        // }, ]
+      });
+      new $.fn.dataTable.FixedHeader(table);
+    });
   </script>
 </body>
 
