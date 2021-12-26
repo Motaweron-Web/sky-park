@@ -129,6 +129,10 @@ content {
   background-color: #a6c64c;
 }
 
+.sidenav {
+  z-index: 999;
+}
+
 .sidenav .navbar-brand {
   text-align: center;
   padding: 20px 5px 10px 5px;
@@ -143,6 +147,10 @@ content {
 
 .form-label {
   text-transform: capitalize;
+}
+
+.form-label.fs-4 {
+  color: #0080a4;
 }
 
 .navbar-vertical .navbar-nav .nav-link .icon {
@@ -212,6 +220,10 @@ content {
 
 .choices__list--dropdown .choices__item {
   padding: 4px 10px !important;
+}
+
+.choices__placeholder {
+  opacity: 1;
 }
 
 .choose {
@@ -422,6 +434,11 @@ footer {
   margin: 0;
 }
 
+.controlIcons .checked {
+  background-color: #a6c64c;
+  color: #ffffff;
+}
+
 .countInput {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -588,5 +605,41 @@ footer {
 
 .printBtn .btn {
   display: block;
+}
+
+.paymentMethods .btn {
+  margin: 5px;
+}
+
+.paymentMethods .btn svg {
+  width: 40px;
+  height: 40px;
+}
+
+.paymentMethods .btn span {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.screens .screen {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #eee;
+  background-color: #F8F9FA;
+  padding: 20px 40px 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.screens .screen span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.screens .screen strong {
+  font-size: 28px;
 }
 /*# sourceMappingURL=style.css.map */

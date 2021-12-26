@@ -150,6 +150,8 @@ content {
 }
 
 .sidenav {
+    z-index: 999;
+
     .navbar-brand {
         text-align: center;
         padding: 20px 5px 10px 5px;
@@ -164,6 +166,10 @@ content {
 
 .form-label {
     text-transform: capitalize;
+
+    &.fs-4 {
+        color: $secondColor;
+    }
 }
 
 .navbar-vertical .navbar-nav .nav-link .icon {
@@ -229,6 +235,9 @@ content {
     padding: 4px 10px !important;
 }
 
+.choices__placeholder {
+    opacity: 1;
+}
 
 
 
@@ -438,6 +447,11 @@ footer {
 
     }
 
+    .checked {
+        background-color: $mainColor;
+        color: $white-color;
+    }
+
 }
 
 .countInput {
@@ -576,12 +590,57 @@ footer {
 }
 
 .printBtn {
-    padding-top: 30px ;
+    padding-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     .btn {
         display: block;
+    }
+}
+
+
+.paymentMethods {
+    .btn {
+        margin: 5px;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 5px;
+        }
+    }
+
+}
+
+
+.screens {
+
+    .screen {
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #eee;
+        background-color: #F8F9FA;
+        padding: 20px 40px 10px;
+        border-radius: 5px;
+        margin: 5px;
+
+        span {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 28px;
+
+        }
     }
 }
