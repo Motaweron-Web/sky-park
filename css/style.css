@@ -46,6 +46,8 @@ a:hover {
 
 button:focus {
   outline: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .form-control:focus {
@@ -91,6 +93,10 @@ content {
 
 .btn {
   margin: 0;
+}
+
+.color1 {
+  color: #a6c64c;
 }
 
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
@@ -350,6 +356,41 @@ footer {
   border-top-width: 0px !important;
 }
 
+.table.dataTable .even {
+  background-color: #fcfcfc;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details {
+  display: block;
+}
+
+@media (max-width: 678px) {
+  table.dataTable > tbody > tr.child ul.dtr-details li:last-child .controlIcons {
+    display: block;
+  }
+  table.dataTable > tbody > tr.child ul.dtr-details li:last-child .controlIcons .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 340px) {
+  table.dataTable > tbody > tr.child ul.dtr-details span.dtr-data {
+    display: block;
+  }
+}
+
+.table thead th {
+  padding: 10px 8px;
+}
+
+table.dataTable > tbody > tr.child span.dtr-title::after {
+  content: " : ";
+  padding: 0 5px;
+}
+
 .dt-bootstrap5 .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -398,7 +439,7 @@ footer {
 
 .controlIcons {
   position: relative;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 
@@ -421,6 +462,8 @@ footer {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  padding: 12px;
+  text-transform: capitalize;
 }
 
 .controlIcons .icon:hover {
@@ -428,6 +471,8 @@ footer {
           box-shadow: 0px 2px 4px #00000030;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+  background-color: #a6c64c;
+  color: #ffffff;
 }
 
 .controlIcons .icon:last-child {
@@ -641,5 +686,175 @@ footer {
 
 .screens .screen strong {
   font-size: 28px;
+}
+
+.topUp {
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.alert-primary {
+  border: none;
+}
+
+.calendar .months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.calendar .months p {
+  display: inline-block;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.calendar .months p span {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: larger;
+  display: block;
+}
+
+.calendar .months .icon {
+  min-width: 40px;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-radius: 1000px;
+  border: 1px solid #eee;
+  padding: 5px;
+  margin: 0;
+}
+
+.calendar .calendarBody,
+.calendar .calendarHead {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+  margin: 20px 0;
+}
+
+.calendar .calendarBody .day,
+.calendar .calendarHead .day {
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.calendar .calendarHead {
+  background-color: #a6c64c30;
+  border-radius: 10px;
+}
+
+.calendar .calendarHead .day {
+  padding: 10px;
+  border-right: 1px solid #a6c64c;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.calendar .calendarHead .day:last-child {
+  border-right: none;
+}
+
+.calendar .calendarBody .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dayDetails {
+  padding: 40px 20px 20px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.dayDetails .dateNum {
+  font-size: 100px !important;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.dayDetails .dateName {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.dayDetails .details {
+  margin: 50px 0 20px;
+}
+
+.dayDetails .details .title {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.dayDetails .details .event {
+  margin-bottom: 15px;
+}
+
+.dayDetails .details .event:last-child {
+  margin-bottom: 0;
+}
+
+.dayDetails .details .event .icon {
+  min-width: 35px;
+  height: 35px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1000px;
+  border: 1px solid #eee;
+  padding: 5px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.dayDetails .details .event .icon i {
+  font-size: 14px;
+}
+
+.dayDetails .details .event p {
+  display: inline-block;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+.reservation {
+  text-align: center;
+}
+
+.reservation .btn {
+  color: #a6c64c;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */

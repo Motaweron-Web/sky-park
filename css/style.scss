@@ -56,6 +56,7 @@ a:hover {
 
 button:focus {
     outline: 0;
+    box-shadow: none !important;
 }
 
 .form-control:focus {
@@ -101,6 +102,10 @@ content {
 
 .btn {
     margin: 0;
+}
+
+.color1 {
+    color: $mainColor;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -163,6 +168,9 @@ content {
         }
     }
 }
+
+
+
 
 .form-label {
     text-transform: capitalize;
@@ -357,7 +365,49 @@ footer {
             border-top-width: 0px !important;
         }
     }
+
+    .even {
+        background-color: #fcfcfc
+    }
 }
+
+table.dataTable>tbody>tr.child ul.dtr-details {
+    display: block;
+
+    @media (max-width:678px) {
+        li {
+            &:last-child {
+                .controlIcons {
+                    display: block;
+
+                    .icon {
+                        display: flex;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:340px) {
+
+        span.dtr-data {
+            display: block;
+        }
+    }
+}
+
+.table thead th {
+    padding: 10px 8px;
+}
+
+table.dataTable>tbody>tr.child span.dtr-title {
+    &::after {
+        content: " : ";
+        padding: 0 5px;
+    }
+}
+
 
 .dt-bootstrap5 {
     .row {
@@ -420,7 +470,7 @@ footer {
 
 .controlIcons {
     position: relative;
-    display: block;
+    display: inline-block;
     text-align: center;
 
     .icon {
@@ -435,10 +485,14 @@ footer {
         margin-right: 2px;
         cursor: pointer;
         transition: $transition;
+        padding: 12px;
+        text-transform: capitalize;
 
         &:hover {
             box-shadow: 0px 2px 4px #00000030;
             transform: translateY(-2px);
+            background-color: $mainColor;
+            color: $white-color;
         }
 
         &:last-child {
@@ -642,5 +696,165 @@ footer {
             font-size: 28px;
 
         }
+    }
+}
+
+
+.topUp {
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.alert-primary {
+    border: none;
+}
+
+
+.calendar {
+
+    .months {
+        display: flex;
+        align-items: flex-end;
+
+        p {
+            display: inline-block;
+            padding: 5px 20px;
+            text-align: center;
+
+            span {
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: larger;
+                // padding-left: 10px;
+                display: block;
+            }
+        }
+
+        .icon {
+            min-width: 40px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white-color;
+            border-radius: 1000px;
+            border: 1px solid #eee;
+            padding: 5px;
+            margin: 0;
+        }
+    }
+}
+
+.calendar {
+
+    .calendarBody,
+    .calendarHead {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        // grid-column-gap: 5px;
+        // grid-row-gap: 5px;
+        margin: 20px 0;
+
+        .day {
+            height: 100%;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    .calendarHead {
+        background-color: #a6c64c30;
+        border-radius: 10px;
+
+        .day {
+            padding: 10px;
+            border-right: 1px solid $mainColor;
+            font-size: larger;
+            font-weight: bold;
+
+            &:last-child {
+                border-right: none;
+            }
+
+        }
+    }
+
+    .calendarBody {
+        .day {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+}
+
+.dayDetails {
+    padding: 40px 20px 20px;
+    border-radius: 10px;
+    color: $white-color;
+
+    .dateNum {
+        font-size: 100px !important;
+        color: $white-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+
+    }
+
+    .dateName {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+    }
+
+    .details {
+        margin: 50px 0 20px;
+
+        .title {
+            color: $white-color;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+        }
+
+        .event {
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .icon {
+                min-width: 35px;
+                height: 35px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1000px;
+                border: 1px solid #eee;
+                padding: 5px;
+                margin: 0;
+                color: $white-color;
+                i{
+                    font-size: 14px;
+                }
+
+            }
+            p{
+                display: inline-block;
+                margin-left: 5px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.reservation{
+    text-align: center;
+    .btn{
+        color: $mainColor;
+        font-weight: normal;
     }
 }
