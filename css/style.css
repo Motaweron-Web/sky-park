@@ -271,6 +271,11 @@ content {
   color: #ffffff;
 }
 
+.choose svg {
+  width: 50px;
+  height: 50px;
+}
+
 footer {
   padding: 40px 20px;
 }
@@ -652,19 +657,28 @@ table.dataTable > tbody > tr.child span.dtr-title::after {
   display: block;
 }
 
+.userAge .btn,
 .paymentMethods .btn {
   margin: 5px;
 }
 
+.userAge .btn svg,
 .paymentMethods .btn svg {
   width: 40px;
   height: 40px;
 }
 
+.userAge .btn span,
 .paymentMethods .btn span {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 5px;
+}
+
+.userAge .btn:focus,
+.paymentMethods .btn:focus {
+  -webkit-box-shadow: 0 4px 7px -1px #a6c64c60, 0 2px 4px -1px #a6c64c60 !important;
+          box-shadow: 0 4px 7px -1px #a6c64c60, 0 2px 4px -1px #a6c64c60 !important;
 }
 
 .screens .screen {
@@ -1018,5 +1032,12 @@ table.dataTable > tbody > tr.child span.dtr-title::after {
   float: right;
   margin: 0 0 4px;
   color: #ffffff;
+}
+
+.userAge {
+  border: 1px solid #073b44;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #F8F9FA;
 }
 /*# sourceMappingURL=style.css.map */

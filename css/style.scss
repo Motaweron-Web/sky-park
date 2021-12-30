@@ -274,6 +274,10 @@ content {
         background-color: $mainColor;
         color: $white-color;
     }
+    svg{
+        width: 50px;
+        height: 50px;
+    }
 }
 
 footer {
@@ -623,7 +627,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
         display: block;
     }
 }
-
+.userAge,
 .paymentMethods {
     .btn {
         margin: 5px;
@@ -637,6 +641,10 @@ table.dataTable>tbody>tr.child span.dtr-title {
             font-weight: bold;
             text-transform: uppercase;
             margin-left: 5px;
+        }
+
+        &:focus{
+            box-shadow: 0 4px 7px -1px #a6c64c60, 0 2px 4px -1px #a6c64c60 !important;
         }
     }
 }
@@ -987,4 +995,18 @@ table.dataTable>tbody>tr.child span.dtr-title {
         margin: 0 0 4px;
         color: $white-color;
     }
+}
+
+
+// .userAge{
+//     .btn{
+//         width: 49%;
+//     }
+// }
+
+.userAge{
+    border: 1px solid $thirdColor;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #F8F9FA;
 }
