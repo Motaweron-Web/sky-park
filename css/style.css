@@ -136,7 +136,7 @@ content {
 }
 
 .sidenav {
-  z-index: 999;
+  z-index: 1030;
 }
 
 .sidenav .navbar-brand {

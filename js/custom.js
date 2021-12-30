@@ -2,17 +2,17 @@
 // load
 ////////////////////////////////////////////
 // load SideNav
-fetch("./sideNav.html")
-    .then((response) => response.text())
-    .then((html) => {
-        document.getElementById("sidenav-main").innerHTML = html;
-    });
-// load navBar
-fetch("./navBar.html")
-    .then((response) => response.text())
-    .then((html) => {
-        document.getElementById("navbarBlur").innerHTML = html;
-    })
+// fetch("./sideNav.html")
+//     .then((response) => response.text())
+//     .then((html) => {
+//         document.getElementById("sidenav-main").innerHTML = html;
+//     });
+// // load navBar
+// fetch("./navBar.html")
+//     .then((response) => response.text())
+//     .then((html) => {
+//         document.getElementById("navbarBlur").innerHTML = html;
+//     })
 // load footer
 fetch("./footer.html")
     .then((response) => response.text())
