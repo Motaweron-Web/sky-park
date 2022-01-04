@@ -22,7 +22,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-xl-none"
         aria-hidden="true" id="iconSidenav"></i>
-  <a class="navbar-brand m-0" href="index.html">
+      <a class="navbar-brand m-0" href="index.html">
         <img src="img/logo.png" class="navbar-brand-img h-100" alt="main_logo">
         <!-- <span class="ms-1 font-weight-bold">Sky Park</span> -->
       </a>
@@ -85,21 +85,21 @@
           </a>
           <div class="collapse show" id="groupSale">
             <ul class="nav ms-4 ps-3">
-              
+
               <li class="nav-item ">
                 <a class="nav-link " href="reservations.html">
                   <span class="sidenav-mini-icon"> R </span>
                   <span class="sidenav-normal"> Reservations </span>
                 </a>
               </li>
-    
+
               <li class="nav-item ">
                 <a class="nav-link " href="capacity.html">
                   <span class="sidenav-mini-icon"> C </span>
                   <span class="sidenav-normal"> Capacity </span>
                 </a>
               </li>
-            
+
               <li class="nav-item ">
                 <a class="nav-link " href="group-access.html">
                   <span class="sidenav-mini-icon"> G </span>
@@ -120,13 +120,15 @@
           </a>
         </li>
       </ul>
-    </div></aside>
+    </div>
+  </aside>
   <!-- ================================ end Side Nav ================== -->
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- ================================ NavBar ================== -->
     <nav id="navbarBlur"
       class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 p-2 px-3 mx-4 shadow-none border-radius-xl z-index-sticky"
-      data-scroll="true"> <nav aria-label="breadcrumb">
+      data-scroll="true">
+      <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
           <li class="breadcrumb-item text-sm">
             <a class="opacity-3 text-dark" href="index.html">
@@ -163,7 +165,8 @@
             </a>
           </li>
         </ul>
-      </div> </nav>
+      </div>
+    </nav>
     <!-- ================================ end NavBar ================== -->
     <content class="container-fluid pt-4">
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
@@ -172,15 +175,15 @@
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
       <h2 class="MainTitle mb-5 ms-4">ticket</h2>
       <div class="multisteps-form">
-        <div class="row">
+        <form action="family-access.html" class="row">
           <div class="col-lg-9 p-1 ">
             <div class="multisteps-form__progress mb-5">
-              <button class="multisteps-form__progress-btn js-active" title="ticket"> <span>ticket</span> </button>
-              <button class="multisteps-form__progress-btn" title="visitors"> visitors</button>
-              <button class="multisteps-form__progress-btn" title="products"> products</button>
-              <button class="multisteps-form__progress-btn" title="payment"> payment</button>
+              <button type="button" class="multisteps-form__progress-btn js-active" title="ticket"> ticket </button>
+              <button type="button" class="multisteps-form__progress-btn" title="visitors"> visitors</button>
+              <button type="button" class="multisteps-form__progress-btn" title="products"> products</button>
+              <button type="button" class="multisteps-form__progress-btn" title="payment"> payment</button>
             </div>
-            <form class="multisteps-form__form mb-2" action="family-access.html">
+            <div class="multisteps-form__form mb-2">
               <!-- step 1 -->
               <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
                 <h5 class="font-weight-bolder">ticket</h5>
@@ -503,7 +506,8 @@
                             </td>
                             <td>
                               <span class="controlIcons">
-                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i class="far fa-trash-alt"></i> </span>
+                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i
+                                    class="far fa-trash-alt"></i> </span>
                               </span>
                             </td>
                           </tr>
@@ -531,7 +535,8 @@
                             </td>
                             <td>
                               <span class="controlIcons">
-                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i class="far fa-trash-alt"></i> </span>
+                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i
+                                    class="far fa-trash-alt"></i> </span>
                               </span>
                             </td>
                           </tr>
@@ -592,7 +597,8 @@
                             <td> 160 EGP </td>
                             <td>
                               <span class="controlIcons">
-                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i class="far fa-trash-alt"></i> </span>
+                                <span class="icon" data-bs-toggle="tooltip" title="Delete"> <i
+                                    class="far fa-trash-alt"></i> </span>
                               </span>
                             </td>
                           </tr>
@@ -637,13 +643,28 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-6 p-2">
-                      <label class="form-label"> discount </label>
-                      <select class="form-control" id="choices-discount">
-                        <option value="">10 % </option>
-                        <option value="">20 %</option>
-                      </select>
+                    <div class="col-12 p-2">
+                      <div class="row align-items-end">
+                        <div class="col-md-6 p-2">
+                          <label class="form-label"> Discount Value </label>
+                          <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-6 p-2">
+                          <label class="form-label d-block"> Discount Type </label>
+                          <div class="form-check d-inline-block py-2 mx-2 ">
+                            <input class="form-check-input " type="radio" name="offerType" id="offerType1">
+                            <label class="form-check-label" for="offerType1"> Percent </label>
+                          </div>
+                          <div class="form-check d-inline-block py-2 mx-2 ">
+                            <input class="form-check-input " type="radio" name="offerType" id="offerType2">
+                            <label class="form-check-label" for="offerType2"> Amount </label>
+                          </div>
+                        </div>
+                      </div>
+                       
                     </div>
+                   
+
                     <div class="col-12 p-2">
                       <label class="form-label ">payment method</label>
                       <div class="paymentMethods">
@@ -807,9 +828,16 @@
                           </svg>
                           <span> mastercard </span> </button>
                         <!-- payCash -->
-                        <div class="collapse pt-3 w-100 w-md-50 " id="payCash">
-                          <label> Amount </label>
-                          <input class="form-control" type="number" />
+                        <div class="collapse pt-3 " id="payCash">
+                          <div class="row align-items-end">
+                            <div class="col-8 col-md-9 p-2 ">
+                              <label> Amount </label>
+                              <input class="form-control" type="number" />
+                            </div>
+                            <div class="col-4 col-md-3 p-2">
+                              <button type="button" class="btn w-100 btn-success"> Pay </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -818,17 +846,17 @@
                 <div class="row">
                   <div class="button-row d-flex mt-4 col-12">
                     <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button">Prev</button>
-                    <button class="btn bg-gradient-dark ms-auto mb-0" type="submit"> Confirm </button>
+                    <!-- <button class="btn bg-gradient-dark ms-auto mb-0" type="submit"> Confirm </button> -->
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
           <div class=" col-lg-3 p-1 ">
             <div class=" bill">
               <h4 class="font-weight-bolder ps-2">Bill</h4>
               <div class="info">
-                <h6 class="billTitle"> ticket </h6>
+                <h6 class="billTitle"> ticket <span> #WSF54898</span> </h6>
                 <ul>
                   <li> <label> Visit Date : </label> <strong> 18 / 10 / 2021 </strong> </li>
                   <li> <label> Reservation Duration : </label> <strong> 2 h </strong> </li>
@@ -882,13 +910,14 @@
               </div>
               <img src="img/barcode.jpg" class="barcode">
               <div class="printBtn">
-                <button class="btn btn-outline-info fw-normal"> <i class="fal fa-print me-2"></i> Print
-                </button>
-                <button class="btn btn-info"> <i class="fas fa-sign-out me-2"></i> Print & Exit </button>
+                <button type="button" class="btn btn-outline-info fw-normal "> <i class="fas fa-sign-out me-2"></i>
+                  Print & Exit </button>
+                <button type="submit" class="btn btn-info "> <i class="fal fa-print me-2"></i> Access </button>
+
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
@@ -916,7 +945,7 @@
   <script src="js/plugins/threejs.js"></script>
   <script src="js/plugins/orbit-controls.js"></script>
   <script src="js/plugins/choices.min.js"></script>
-    <script src="js/plugins/multistep-form.js"></script>
+  <script src="js/plugins/multistep-form.js"></script>
 
   <!-- data table -->
   <script src="js/plugins/datatables.min.js"></script>

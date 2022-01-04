@@ -541,6 +541,9 @@ table.dataTable>tbody>tr.child span.dtr-title {
         .billTitle {
             margin-bottom: 10px;
             text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         ul {
@@ -1010,9 +1013,14 @@ table.dataTable>tbody>tr.child span.dtr-title {
 //     }
 // }
 
-.userAge{
+.BirthdayInfo{
     border: 1px solid $thirdColor;
-    margin: 20px;
     border-radius: 10px;
     background-color: #F8F9FA;
+    padding: 10px ;
+}
+
+
+.btn-success{
+    background-color: $mainColor;
 }

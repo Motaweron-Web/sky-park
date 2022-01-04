@@ -557,6 +557,15 @@ table.dataTable > tbody > tr.child span.dtr-title::after {
 .bill .info .billTitle {
   margin-bottom: 10px;
   text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .bill .info ul {
@@ -1042,10 +1051,14 @@ table.dataTable > tbody > tr.child span.dtr-title::after {
   color: #ffffff;
 }
 
-.userAge {
+.BirthdayInfo {
   border: 1px solid #073b44;
-  margin: 20px;
   border-radius: 10px;
   background-color: #F8F9FA;
+  padding: 10px;
+}
+
+.btn-success {
+  background-color: #a6c64c;
 }
 /*# sourceMappingURL=style.css.map */

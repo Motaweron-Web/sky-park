@@ -173,15 +173,15 @@
       <h2 class="MainTiltle mb-5 ms-4"> Event Reservation </h2>
 
       <div class="multisteps-form">
-        <div class="row">
+        <form  action="group-access.html" class="row">
           <div class="col-lg-9 p-1 ">
             <div class="multisteps-form__progress mb-5">
-              <button class="multisteps-form__progress-btn js-active" title="ReservationInfo"> <span>Reservation Info</span> </button>
-              <button class="multisteps-form__progress-btn" title="visitors"> visitors</button>
-              <button class="multisteps-form__progress-btn" title="products"> products</button>
-              <button class="multisteps-form__progress-btn" title="payment"> payment</button>
+              <button type="button" class="multisteps-form__progress-btn js-active" title="ReservationInfo"> Reservation Info </button>
+              <button type="button" class="multisteps-form__progress-btn" title="visitors"> visitors</button>
+              <button type="button" class="multisteps-form__progress-btn" title="products"> products</button>
+              <button type="button" class="multisteps-form__progress-btn" title="payment"> payment</button>
             </div>
-            <form class="multisteps-form__form mb-2" action="group-access.html">
+            <div class="multisteps-form__form mb-2">
               <!-- step 1 -->
               <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
                 <h5 class="font-weight-bolder">Reservation Info</h5>
@@ -770,9 +770,16 @@
                           </svg>
                           <span> mastercard </span> </button>
                         <!-- payCash -->
-                        <div class="collapse pt-3 w-100 w-md-50 " id="payCash">
-                          <label> Amount </label>
-                          <input class="form-control" type="number" />
+                        <div class="collapse pt-3 " id="payCash">
+                          <div class="row align-items-end">
+                            <div class="col-8 col-md-9 p-2 ">
+                              <label> Amount </label>
+                              <input class="form-control" type="number" />
+                            </div>
+                            <div class="col-4 col-md-3 p-2">
+                              <button type="button" class="btn w-100 btn-success"> Pay </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -781,17 +788,17 @@
                 <div class="row">
                   <div class="button-row d-flex mt-4 col-12">
                     <button class="btn bg-gradient-secondary mb-0 js-btn-prev" type="button">Prev</button>
-                    <button class="btn bg-gradient-dark ms-auto mb-0" type="submit"> Confirm </button>
+                    <!-- <button class="btn bg-gradient-dark ms-auto mb-0" type="submit"> Confirm </button> -->
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
           <div class=" col-lg-3 p-1 ">
             <div class=" bill">
               <h4 class="font-weight-bolder ps-2">Bill</h4>
               <div class="info">
-                <h6 class="billTitle"> ticket </h6>
+                <h6 class="billTitle"> ticket <span> #WSF54898</span> </h6>
                 <ul>
                   <li> <label> Visit Date : </label> <strong> 18 / 10 / 2021 </strong> </li>
                   <li> <label> Reservation Duration : </label> <strong> 2 h </strong> </li>
@@ -843,14 +850,16 @@
                   <li> <label> Change : </label> <strong> 150 EGP </strong> </li>
                 </ul>
               </div>
+              <img src="img/barcode.jpg" class="barcode">
               <div class="printBtn">
-                <button class="btn btn-outline-info fw-normal"> <i class="fal fa-print me-2"></i> Print
-                </button>
-                <button class="btn btn-info"> <i class="fas fa-sign-out me-2"></i> Print & Exit </button>
+                <button type="button" class="btn btn-outline-info fw-normal "> <i class="fas fa-sign-out me-2"></i>
+                  Print & Exit </button>
+                <button type="submit" class="btn btn-info "> <i class="fal fa-print me-2"></i> Access </button>
+
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
 
 
