@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +10,14 @@
   <link href="css/font.awesome.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
-
 <body class="g-sidenav-show  bg-gray-100">
   <!-- ================================ Side Nav ============== -->
   <aside id="sidenav-main"
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white">
-        <div class="sidenav-header">
+    <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-xl-none"
         aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href="#!">
+      <a class="navbar-brand m-0" href="index.html">
         <img src="img/logo.png" class="navbar-brand-img h-100" alt="main_logo">
         <!-- <span class="ms-1 font-weight-bold">Sky Park</span> -->
       </a>
@@ -82,21 +80,18 @@
           </a>
           <div class="collapse show" id="groupSale">
             <ul class="nav ms-4 ps-3">
-              
               <li class="nav-item ">
                 <a class="nav-link " href="reservations.html">
                   <span class="sidenav-mini-icon"> R </span>
                   <span class="sidenav-normal"> Reservations </span>
                 </a>
               </li>
-    
               <li class="nav-item ">
                 <a class="nav-link " href="capacity.html">
                   <span class="sidenav-mini-icon"> C </span>
                   <span class="sidenav-normal"> Capacity </span>
                 </a>
               </li>
-            
               <li class="nav-item ">
                 <a class="nav-link " href="group-access.html">
                   <span class="sidenav-mini-icon"> G </span>
@@ -105,16 +100,6 @@
               </li>
             </ul>
           </div>
-        </li>
-        <!-- nav-item  -->
-        <li class="nav-item">
-          <a href="coupon.html" class="nav-link ">
-            <div
-              class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
-              <i class="fas fa-ticket-alt"></i>
-            </div>
-            <span class="nav-link-text ms-1">Coupon</span>
-          </a>
         </li>
         <!-- nav-item  -->
         <li class="nav-item">
@@ -127,13 +112,15 @@
           </a>
         </li>
       </ul>
-    </div></aside>
+    </div>
+  </aside>
   <!-- ================================ end Side Nav ================== -->
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- ================================ NavBar ================== -->
     <nav id="navbarBlur"
       class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 p-2 px-3 mx-4 shadow-none border-radius-xl z-index-sticky"
-      data-scroll="true"> <nav aria-label="breadcrumb">
+      data-scroll="true">
+      <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
           <li class="breadcrumb-item text-sm">
             <a class="opacity-3 text-dark" href="index.html">
@@ -170,7 +157,8 @@
             </a>
           </li>
         </ul>
-      </div> </nav>
+      </div>
+    </nav>
     <!-- ================================ end NavBar ================== -->
     <content class="container-fluid pt-4">
       <!-- ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) -->
@@ -408,7 +396,6 @@
       const globeRadius = 100;
       const globeWidth = 4098 / 2;
       const globeHeight = 1968 / 2;
-
       function convertFlatCoordsToSphereCoords(x, y) {
         let latitude = ((x - globeWidth) / globeWidth) * -180;
         let longitude = ((y - globeHeight) / globeHeight) * -90;
@@ -421,7 +408,6 @@
           z: Math.sin(latitude) * radius
         };
       }
-
       function makeMagic(points) {
         const {
           width,
@@ -474,7 +460,6 @@
         camera.orbitControls.enableRotate = true;
         camera.orbitControls.autoRotate = true;
         camera.position.z = -265;
-
         function animate() {
           // orbitControls.autoRotate is enabled so orbitControls.update
           // must be called inside animation loop.
@@ -484,7 +469,6 @@
         }
         animate();
       }
-
       function hasWebGL() {
         const gl =
           canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
@@ -494,7 +478,6 @@
           return false;
         }
       }
-
       function init() {
         if (hasWebGL()) {
           window
@@ -511,5 +494,4 @@
     })();
   </script>
 </body>
-
 </html>

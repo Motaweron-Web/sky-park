@@ -1061,4 +1061,83 @@ table.dataTable > tbody > tr.child span.dtr-title::after {
 .btn-success {
   background-color: #a6c64c;
 }
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rating .gold {
+  color: #FFD700;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars input:checked ~ label.star::after {
+  color: #ffdd44;
+}
+
+.stars label {
+  padding: 1px;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.stars label:hover {
+  -webkit-transform: rotate(-15deg) scale(1.3);
+          transform: rotate(-15deg) scale(1.3);
+}
+
+.stars label::after {
+  content: '\f005';
+  color: #777777;
+  font-family: 'Font Awesome 5 free';
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.stars input.star-1:checked ~ label.star::after {
+  color: #ff0000;
+}
+
+.stars input.star-5:checked ~ label.star::after {
+  color: #ffee77;
+}
+
+.star-icon {
+  margin-bottom: 20px;
+}
+
+.star-icon input {
+  display: none;
+}
+
+.star-icon input + label {
+  font-size: 20px;
+  text-shadow: 1px 1px 0 #ffe400;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+.star-icon input:checked + label ~ label {
+  color: #777777;
+}
+
+.star-icon label:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
 /*# sourceMappingURL=style.css.map */
